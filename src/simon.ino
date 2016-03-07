@@ -26,8 +26,22 @@ void loop() {
   }
 
   // next level!
-  delay(300);
+  delay(1000);
   level ++;
+}
+
+void gameOver(int level) {
+  for(int i=0; i<level; i++) {
+    on(0);
+    on(2);
+    on(1);
+    delay(500);
+    off(0);
+    off(2);
+    off(1);
+    delay(300);
+  }
+  level = 0;
 }
 
 void on(int pin) {
